@@ -16,13 +16,10 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
-    testImplementation libs.junit.jupiter
-
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-
-    // This dependency is used by the application.
-    implementation libs.guava
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.0'
+    implementation 'com.google.guava:guava:32.1.2-jre'
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -34,7 +31,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'gradletest.App'
+    mainClass = 'discordbot.JavaBot'
 }
 
 tasks.named('test') {
