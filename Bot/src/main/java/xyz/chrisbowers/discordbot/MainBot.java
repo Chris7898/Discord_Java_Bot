@@ -45,13 +45,13 @@ import java.util.concurrent.TimeUnit;
 
 import static net.dv8tion.jda.api.interactions.commands.OptionType.*;
 
-public class JavaBot extends ListenerAdapter {
+public class MainBot extends ListenerAdapter {
     public static void main(String[] args) throws InterruptedException {
         // slash commands don't need any intents
         EnumSet<GatewayIntent> intents = EnumSet.noneOf(GatewayIntent.class);
         System.out.println("Starting Discord bot...");
-        JDA jda = JDABuilder.createLight("BOT_TOKEN", intents)
-                .addEventListeners(new JavaBot())
+        JDA jda = JDABuilder.createLight("Bot_Token", intents)
+                .addEventListeners(new MainBot())
                 .build();
 
         jda.awaitReady();

@@ -42,25 +42,25 @@ java {
 sourceSets {
     main {
         java {
-            srcDirs = ['src/xyz/main/java']
+            srcDirs = ['src/main/java']
         }
         resources {
-            srcDirs = ['src/xyz/main/resources']
+            srcDirs = ['src/main/resources']
         }
     }
     test {
         java {
-            srcDirs = ['src/xyz/test/java']
+            srcDirs = ['src/test/java']
         }
         resources {
-            srcDirs = ['src/xyz/test/resources']
+            srcDirs = ['src/test/resources']
         }
     }
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'discordbot.JavaBot'
+    mainClass = 'discordbot.MainBot'
 }
 
 tasks.named('test') {
