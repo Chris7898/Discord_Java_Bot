@@ -29,6 +29,25 @@ java {
     }
 }
 
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/xyz/main/java']
+        }
+        resources {
+            srcDirs = ['src/xyz/main/resources']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/xyz/test/java']
+        }
+        resources {
+            srcDirs = ['src/xyz/test/resources']
+        }
+    }
+}
+
 application {
     // Define the main class for the application.
     mainClass = 'discordbot.JavaBot'
