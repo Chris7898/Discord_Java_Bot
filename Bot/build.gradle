@@ -20,6 +20,16 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.0'
     implementation 'com.google.guava:guava:32.1.2-jre'
+    implementation("commons-cli:commons-cli:1.5.0")
+    implementation("net.dv8tion:JDA:6.3.2") { // replace $version with the latest version
+      // Optionally disable audio natives to reduce jar size by excluding `opus-java` and `tink`
+      // Gradle DSL:
+      // exclude module: 'opus-java' // required for encoding audio into opus, not needed if audio is already provided in opus encoding
+      // exclude module: 'tink' // required for encrypting and decrypting audio
+      // Kotlin DSL:
+      // exclude(module="opus-java") // required for encoding audio into opus, not needed if audio is already provided in opus encoding
+      // exclude(module="tink") // required for encrypting and decrypting audio
+    }
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
