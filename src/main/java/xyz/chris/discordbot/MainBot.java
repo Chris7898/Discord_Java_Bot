@@ -56,7 +56,6 @@ public class MainBot extends ListenerAdapter {
 
         jda.awaitReady();
         System.out.println("Bot is online. This process stays running until you stop it (Ctrl+C).");
-
         // You might need to reload your Discord client if you don't see the commands
         CommandListUpdateAction commands = jda.updateCommands();
 
@@ -85,6 +84,12 @@ public class MainBot extends ListenerAdapter {
                 .setIntegrationTypes(IntegrationType.ALL)
                 // you can add required options like this too
                 .addOption(STRING, "content", "What the bot should say", true));
+        
+        //NOTE - Youtube command
+        // commands.addCommands(Commands.slash("YT", "Sends a youtube link")
+        //             .setContexts(InteractionContextType.GUILD)
+        //             .setIntegrationTypes(IntegrationType.ALL)
+        //             .addOption(STRING, "query", "The search query to find a youtube video for", true));
 
         // Commands without any inputs
         commands.addCommands(Commands.slash("leave", "Make the bot leave the server")

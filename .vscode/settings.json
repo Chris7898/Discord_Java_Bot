@@ -1,6 +1,8 @@
 {
-    "java.jdt.ls.java.home": "C:/Program Files/Java/jdk-17.0.5",
-    "java.import.gradle.java.home": "C:/Program Files/Java/jdk-17.0.5",
+    // Used for Windows: "java.jdt.ls.java.home": "C:/Program Files/Java/jdk-17.0.5",
+    // Used for Windows:"java.import.gradle.java.home": "C:/Program Files/Java/jdk-17.0.5",
+    "java.jdt.ls.java.home": "/Users/chris1/Library/Java/JavaVirtualMachines/ms-17.0.17/Contents/Home",
+    "java.import.gradle.java.home": "/Users/chris1/Library/Java/JavaVirtualMachines/ms-17.0.17/Contents/Home",
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.compile.nullAnalysis.mode": "automatic"
 }
